@@ -1,17 +1,28 @@
+import styled from "styled-components";
 import perfil from "../../imagens/perfil.svg";
 import sacola from "../../imagens/sacola.svg";
-import "./estilo.css";
+
+const MenuContainer = styled.ul`
+  display: flex;
+  align-items: center;
+`;
+const Icon = styled.ul`
+  list-style: none;
+  margin-right: 40px;
+  width: 25px;
+  align-items: center;
+`;
 
 const icones = [perfil, sacola];
 function MenuHeaderIcon() {
   return (
-    <ul className="menu">
+    <MenuContainer>
       {icones.map((icon) => (
-        <li className="menu-icone">
+        <Icon>
           <img src={icon} alt="icone"></img>
-        </li>
+        </Icon>
       ))}
-    </ul>
+    </MenuContainer>
   );
 }
 

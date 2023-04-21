@@ -9,7 +9,7 @@ const HeaderContainer = styled.header`
 `;
 function Header() {
   return (
-    <HeaderContainer className="App-header">
+    <HeaderContainer>
       <Logo />
       <MenuHeaderItem />
       <MenuHeaderIcon />

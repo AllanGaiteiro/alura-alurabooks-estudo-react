@@ -1,13 +1,29 @@
-import "./estilo.css";
+import styled from "styled-components";
 
+const MenuContainer = styled.ul`
+  display: flex;
+  align-items: center;
+`;
+const Item = styled.ul`
+  list-style: none;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  padding: 0 5px;
+  cursor: pointer;
+  min-width: 120px;
+`;
 const menuItens = ["CATEGORIAS", "MINHA ESTANTE", "FAVORITOS"];
 function MenuHeaderItem() {
   return (
-    <ul className="menu">
+    <MenuContainer>
       {menuItens.map((item) => (
-        <li className="menu-item">{item}</li>
+        <Item>{item}</Item>
       ))}
-    </ul>
+    </MenuContainer>
   );
 }
 
