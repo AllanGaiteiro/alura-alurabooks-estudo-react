@@ -37,6 +37,7 @@ const Result = styled.div`
         border: 1px solid white;
     }
 `
+
 function Search() {
 const [booksSearch,setbooksSearch] = useState([]);
   return (
@@ -46,10 +47,8 @@ const [booksSearch,setbooksSearch] = useState([]);
         <Input placeholder="Escreva sua Proxima leitura"
         onBlur={(event) => {
             const text = event.target.value;
-
-            const result = Books.filter(b => b.nome.includes(text) )
-            console.log(text,result)
-            setbooksSearch(result)
+            const result = Books.filter(b => b.nome.includes(text) );
+            setbooksSearch(result);
 
         }}/>
 
@@ -60,7 +59,7 @@ const [booksSearch,setbooksSearch] = useState([]);
                 <img src={b.src} alt={"imagen do " + b.nome } />
             </Result>
         ))
-        }
+        }            
 
     </SearchContainer>
   );

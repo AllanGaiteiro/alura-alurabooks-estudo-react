@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import imagemLivro from "../../imagens/livro2.png";
+import { CardBook } from "../CardBook/index.js";
 import Title from "../Title";
 import { Books } from "./dados";
 
@@ -25,6 +27,12 @@ function LastReleases() {
           <img src={b.src} alt={"imagen do" + b.nome} />
         ))}
       </NewBooksContainer>
+      <CardBook
+        titulo="Talvez você se interesse por"
+        subtitulo="Angular 11"
+        descricao="Construindo uma aplicação com a plataforma Google"
+        img={imagemLivro}
+      />
     </UltimosLancamentosContainer>
   );
 }
