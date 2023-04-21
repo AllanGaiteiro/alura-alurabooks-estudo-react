@@ -1,3 +1,4 @@
+import { useState } from "react";
 import styled from "styled-components";
 import Input from "../input";
 
@@ -21,11 +22,14 @@ margin-bottom: 40px;
 `;
 
 function Search() {
+const [textoDigitado,setTextoDigitado] = useState('');
   return (
     <SearchContainer>
         <Title>Ja sabe por onde começar?</Title>
         <SubTitle>Encontre seu livro em nossa estante.</SubTitle>
-        <Input placeholder="Escreva sua Proxima leitura"></Input>
+        <Input placeholder="Escreva sua Proxima leitura"
+        onBlur={event => setTextoDigitado(event.target.value)}></Input>
+        <p>{textoDigitado}</p>
     </SearchContainer>
   );
 }
