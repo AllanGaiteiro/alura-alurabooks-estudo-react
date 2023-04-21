@@ -1,0 +1,8 @@
+li {
+  list-style: none;
+}
+.menu-icone {
+  margin-right: 40px;
+  width: 25px;
+  align-items: center;
+}
